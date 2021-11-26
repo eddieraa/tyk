@@ -342,6 +342,12 @@ type VersionInfo struct {
 	APIID                       string            `bson:"api_id" json:"api_id"`
 }
 
+type VersionData struct {
+	NotVersioned   bool                   `bson:"not_versioned" json:"not_versioned"`
+	DefaultVersion string                 `bson:"default_version" json:"default_version"`
+	Versions       map[string]VersionInfo `bson:"versions" json:"versions"`
+}
+
 type AuthProviderMeta struct {
 	Name          AuthProviderCode       `bson:"name" json:"name"`
 	StorageEngine StorageEngineCode      `bson:"storage_engine" json:"storage_engine"`
@@ -514,11 +520,7 @@ type APIDefinition struct {
 		Key       string `bson:"key" json:"key"`
 		StripPath bool   `bson:"strip_path" json:"strip_path"`
 	} `bson:"definition" json:"definition"`
-	VersionData struct {
-		NotVersioned   bool                   `bson:"not_versioned" json:"not_versioned"`
-		DefaultVersion string                 `bson:"default_version" json:"default_version"`
-		Versions       map[string]VersionInfo `bson:"versions" json:"versions"`
-	} `bson:"version_data" json:"version_data"`
+	VersionData               VersionData            `bson:"version_data" json:"version_data"`
 	UptimeTests               UptimeTests            `bson:"uptime_tests" json:"uptime_tests"`
 	Proxy                     ProxyConfig            `bson:"proxy" json:"proxy"`
 	DisableRateLimit          bool                   `bson:"disable_rate_limit" json:"disable_rate_limit"`
