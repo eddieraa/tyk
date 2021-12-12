@@ -14,9 +14,9 @@ import (
 
 	"golang.org/x/net/http2/h2c"
 
-	"github.com/TykTechnologies/again"
 	"github.com/TykTechnologies/tyk/config"
 	"github.com/TykTechnologies/tyk/tcp"
+	"github.com/eddieraa/again"
 	proxyproto "github.com/pires/go-proxyproto"
 	cache "github.com/pmylund/go-cache"
 

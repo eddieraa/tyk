@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"io/ioutil"
 	"os"
-	"syscall"
 	"time"
 
 	"github.com/sirupsen/logrus"
@@ -95,9 +94,11 @@ func (gw *Gateway) handleNewConfiguration(payload string) {
 	}
 
 	log.Info("Sending reload signal to PID: ", myPID)
-	if err := syscall.Kill(myPID, syscall.SIGUSR2); err != nil {
-		log.Error("Process reload failed: ", err)
-	}
+	/*
+		if err := syscall.Kill(myPID, 12); err != nil {
+			log.Error("Process reload failed: ", err)
+		}
+	*/
 }
 
 type GetConfigPayload struct {

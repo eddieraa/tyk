@@ -18,8 +18,8 @@ github.com/OneOfOne/xxhash v1.2.8 h1:31czK/TI9sNkxIKfaUfGlU47BAxQ0ztGgd9vPyqimf8
 github.com/OneOfOne/xxhash v1.2.8/go.mod h1:eZbhyaAYD41SGSSsnmcpxVoRiQ/MPUTjUdIIOT9Um7Q=
 github.com/Shopify/sarama v1.19.0/go.mod h1:FVkBWblsNy7DGZRfXLU0O9RCGt5g3g3yEuWXgklEdEo=
 github.com/Shopify/toxiproxy v2.1.4+incompatible/go.mod h1:OXgGpZ6Cli1/URJOF1DMxUHB2q5Ap20/P/eIdh4G0pI=
-github.com/TykTechnologies/again v0.0.0-20190805133618-6ad301e7eaed h1:/h52kySW055ZF4boJc9tcuQhR909ubCiMN64EMBEu8Q=
-github.com/TykTechnologies/again v0.0.0-20190805133618-6ad301e7eaed/go.mod h1:OUrgdjjCoYX2GZY9Vathb4ExCO9WuPtU1piuOpNw19Q=
+github.com/TykTechnologies/again v0.0.0-20210607095811-f06587b58803 h1:8MsZtsmcdGCDsvQ2ip1+pNnuk4wVz7wKj73BSvmUvZ8=
+github.com/TykTechnologies/again v0.0.0-20210607095811-f06587b58803/go.mod h1:OUrgdjjCoYX2GZY9Vathb4ExCO9WuPtU1piuOpNw19Q=
 github.com/TykTechnologies/circuitbreaker v2.2.2+incompatible h1:UgJdsV/fBL5Ctx43EGKFxkX0W3MqqeRruadDQ1Kzhn4=
 github.com/TykTechnologies/circuitbreaker v2.2.2+incompatible/go.mod h1:f2+J36wN08/zLudMnO+QaqaBhTdQuIqemtaeEQbhMEM=
 github.com/TykTechnologies/drl v0.0.0-20190905191955-cc541aa8e3e1 h1:LimXJxKH+ovz0NrcU3Ue/cYhzN4xu5sJsID0RwjSd1k=
@@ -107,6 +107,8 @@ github.com/eapache/go-xerial-snappy v0.0.0-20180814174437-776d5712da21/go.mod h1
 github.com/eapache/queue v1.1.0/go.mod h1:6eCeP0CKFpHLu8blIFXhExK/dRa7WDZfr6jVFPTqq+I=
 github.com/eclipse/paho.mqtt.golang v1.2.0 h1:1F8mhG9+aO5/xpdtFkW4SxOJB67ukuDC3t2y2qayIX0=
 github.com/eclipse/paho.mqtt.golang v1.2.0/go.mod h1:H9keYFcgq3Qr5OUJm/JZI/i6U7joQ8SYLhZwfeOo6Ts=
+github.com/eddieraa/again v0.0.1 h1:mVOtkhEyDegqII6ygi4lmz5PzcC7+DA9/5i/7qDJUnQ=
+github.com/eddieraa/again v0.0.1/go.mod h1:N9yBURJ68nAHgaMJTSU4tj8uozS4XUEAYd3miiZS+NQ=
 github.com/emanoelxavier/openid2go v0.0.0-20190718021401-6345b638bfc9 h1:4n78QDindikXW3o6Iqrjr7hX0pYxNg513DEEYsDSe+o=
 github.com/emanoelxavier/openid2go v0.0.0-20190718021401-6345b638bfc9/go.mod h1:hahZBazACLtwLVO5XoLT8pPXTGfRt5bK6XddHEy/XUk=
 github.com/envoyproxy/go-control-plane v0.6.9/go.mod h1:SBwIajubJHhxtWwsL9s8ss4safvEdbitLhGGK48rN6g=

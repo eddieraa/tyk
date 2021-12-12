@@ -52,3 +52,4 @@ tyk-gateway.pid
 
 tyk_linux_*
 /dist/
+tyk.exe

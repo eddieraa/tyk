@@ -8,7 +8,6 @@ import (
 	"html/template"
 	"io/ioutil"
 	stdlog "log"
-	"log/syslog"
 	"net"
 	"net/http"
 	pprof_http "net/http/pprof"
@@ -24,12 +23,12 @@ import (
 	textTemplate "text/template"
 	"time"
 
-	"github.com/TykTechnologies/again"
 	"github.com/TykTechnologies/drl"
 	gas "github.com/TykTechnologies/goautosocket"
 	"github.com/TykTechnologies/gorpc"
 	"github.com/TykTechnologies/goverify"
 	logstashHook "github.com/bshuster-repo/logrus-logstash-hook"
+	"github.com/eddieraa/again"
 	"github.com/evalphobia/logrus_sentry"
 	graylogHook "github.com/gemnasium/logrus-graylog-hook"
 	"github.com/gorilla/mux"
@@ -39,7 +38,6 @@ import (
 	"github.com/rs/cors"
 	uuid "github.com/satori/go.uuid"
 	"github.com/sirupsen/logrus"
-	logrus_syslog "github.com/sirupsen/logrus/hooks/syslog"
 	"rsc.io/letsencrypt"
 
 	"github.com/TykTechnologies/tyk/apidef"
@@ -1004,16 +1002,7 @@ func (gw *Gateway) setupLogger() {
 	}
 
 	if gwConfig.UseSyslog {
-		mainLog.Debug("Enabling Syslog support")
-		hook, err := logrus_syslog.NewSyslogHook(gwConfig.SyslogTransport,
-			gwConfig.SyslogNetworkAddr,
-			syslog.LOG_INFO, "")
-
-		if err == nil {
-			log.Hooks.Add(hook)
-			rawLog.Hooks.Add(hook)
-		}
-		mainLog.Debug("Syslog hook active")
+		setLoggerSyslog(gwConfig)
 	}
 
 	if gwConfig.UseGraylog {

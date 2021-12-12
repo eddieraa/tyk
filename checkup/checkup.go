@@ -2,7 +2,6 @@ package checkup
 
 import (
 	"runtime"
-	"syscall"
 
 	"github.com/TykTechnologies/tyk/config"
 	logger "github.com/TykTechnologies/tyk/log"
@@ -67,19 +66,6 @@ func sessionLifetimeCheck(c *config.Config) {
 			"\tcreated in Redis, i.e. tokens will not get deleted from Redis and it eventually become overgrown.\n" +
 			"\tPlease refer to the following link for further guidance:\n" +
 			"\thttps://tyk.io/docs/basic-config-and-security/security/authentication-authorization/physical-token-expiry/")
-	}
-}
-
-func fileDescriptors() {
-	rlimit := &syscall.Rlimit{}
-
-	err := syscall.Getrlimit(syscall.RLIMIT_NOFILE, rlimit)
-	if err == nil && rlimit.Cur < minFileDescriptors {
-		log.Warningf("File descriptor limit %d is too low for production use. A minimum of %d is recommended.\n"+
-			"\tThis could have a significant negative impact on performance.\n"+
-			"\tPlease refer to the following link for further guidance:\n"+
-			"\t\thttps://tyk.io/docs/deploy-tyk-premise-production/#file-handles--file-descriptors",
-			rlimit.Cur, minFileDescriptors)
 	}
 }
 
